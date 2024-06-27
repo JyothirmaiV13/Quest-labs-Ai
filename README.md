@@ -1,15 +1,16 @@
 # Quest-labs-Ai
 Internship
+
 Recommendation System
 
-Overview
+##Overview
 The main goal of this project is to create a product recommendation system. This is based on the user choices, behaviour and ratings from an ecommerce platform.
 Introduction
 A recommendation system is a software tool or algorithm designed to suggest items or content to users based on various factors, such as past behavior, preferences, or item characteristics. These systems aim to personalize user experiences by predicting what users might find interesting or useful.
 For this project I have considered an e-commerce store data named 'olist'. I have performed preprocessing and applied algorithms such as collaborative filtering, matrix factorization, content-based filtering and KMeans to derive insights from the data and to get the required recommendations for the user data.
 The goal was to find the use cases from the data and make suggestions to the customers based on their shopping behaviour and relevant data. We are leveraging the data of customers to increase our customer retention rate, revenue and also to increase the number of loyal long-term customers. By following these approaches, we can satisfy the customers with our data by providing the relevant services and also, we can focus on building the revenue.
 
-Data Overview
+##Data Overview
 The Olist dataset comprises several files, each containing different information:
 Dataset link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=olist_customers_dataset.csv
 olist_orders_dataset.csv - Contains information about orders, including order IDs, customer IDs, order status, purchase timestamps, and more.
@@ -18,7 +19,7 @@ olist_products_dataset.csv - Contains product information such as product IDs, p
 olist_customers_dataset.csv - Contains customer information, including customer IDs and location details.
 olist_reviews_dataset.csv - Contains customer reviews, including review scores, comments, and timestamps.
 
-Data Preprocessing
+#Data Preprocessing
 This step involves cleaning the collected data and preparing the data to give it to the recommendation algorithms. Below are some important steps:
 
 -	Data Cleaning: Remove duplicates, handle missing values, and ensure consistency across datasets.
@@ -28,7 +29,7 @@ This step involves cleaning the collected data and preparing the data to give it
 In my dataset which I have chosen, there were many null values in the orders dataset. So, to remove those I have considered only the values which had a status of ‘delivered’ for that order. Because the status of remaining where unknown and they do no good while refining our data, and further these values just hinder our process.
 For the other columns, I have replaced the null values with 0, and few of them where deleted. In most of the cases I have taken columns only relevant to our analysis. As I mentioned, this olist dataset is relatively big and it has over 1 lakh rows in it. So to process this large amount of data and to derive insights, only particular features where considered like customer_id, product_id, review_score, review_id, price, purchase_date etc. These are the main one’s which I took.
 
-Model Building
+##Model Building
 This is the main implementation for a recommendation system. Here we are going to use different approaches to come to a conclusion for our recommendation.
 Part 1
 For one type of implementation, I have used the RFM framework to build our customer segmentation model. RFM stands for Recency, Frequency, Monetary Value. This would allow us to create the following segments:
